@@ -33,7 +33,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-black py-24 md:py-48 border-t border-black/5">
+    <section className="bg-black py-24 md:py-48 border-t border-black/5" id="leadForm">
       <Container>
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-20">
@@ -57,7 +57,7 @@ export default function ContactForm() {
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-12">
+            <form onSubmit={handleSubmit} className="space-y-12" >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* Name Field */}
                 <div className="relative border-b border-black/10 focus-within:border-black transition-colors duration-500">
