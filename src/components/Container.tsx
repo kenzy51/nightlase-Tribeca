@@ -11,3 +11,15 @@ export default function Container({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+// src/components/Container.tsx
+export function ContainerHeader({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="max-w-[1340px] mx-auto w-full relative 
+     pt-4
+    //  md:pt-8
+    p-3.5
+    ">
+      {children}
+    </div>
+  );
+}

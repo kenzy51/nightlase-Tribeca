@@ -1,13 +1,12 @@
-"use client"
+"use client";
 import Container from "./Container";
 import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="bg-white w-full overflow-hidden flex justify-center h-[40%]">
+    <section className="bg-white w-full overflow-hidden flex justify-center h-[40%] md:p-6">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-start gap-4 md:gap-24">
-          
           {/* Left Column: Heading */}
           <div className="w-full md:w-1/2">
             <motion.span
@@ -37,11 +36,14 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.2 }}
             >
-              <p className="text-[#4A4A4A] font-light leading-relaxed tracking-wide text-base md:text-xl font-sans italic mb-2">
-                Dr. Nina Izhaky and her team redefine the restorative experience
-                through the lens of aesthetic precision.
+              <p className="text-[#4A4A4A] font-light leading-relaxed tracking-wide text-base md:text-xl font-sans italic mb-8">
+                Dr. Nina Izhaky and her team redefine restorative sleep through{" "}
+                <span className="text-black font-normal not-italic">
+                  NightLase®
+                </span>{" "}
+                — an advanced laser therapy where clinical precision meets the
+                delicate artistry of airway health.
               </p>
-
               <button className="group relative inline-block pb-1">
                 <span className="text-[10px] uppercase tracking-[0.5em] text-black">
                   Meet the team
@@ -50,7 +52,6 @@ export default function About() {
               </button>
             </motion.div>
           </div>
-          
         </div>
       </Container>
     </section>

@@ -22,7 +22,7 @@ const features = [
 
 export default function Technology() {
   return (
-    <section className="bg-black text-white py-16 md:py-20 w-full overflow-hidden">
+    <section className="bg-black text-white py-16 md:py-20 w-full overflow-hidden" id="technology">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16 items-start">
           
