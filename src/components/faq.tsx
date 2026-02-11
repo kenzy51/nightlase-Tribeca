@@ -22,7 +22,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-white pb-32 md:pb-20 md:pt-20">
+    <section className="bg-white pb-32 md:pb-20 md:pt-20" id="faq">
       <Container>
         <div className="flex flex-col md:flex-row gap-16 md:gap-24">
           

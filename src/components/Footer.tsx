@@ -69,11 +69,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Branding Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-black/5">
-          <p className="text-[9px] uppercase tracking-[0.4em] text-gray-300">
-            © 2026 Tribeca Dental Studio. All Rights Reserved. Design &
-            Development by Kanat Nazarov
+          <p className="text-[15px] uppercase tracking-[0.4em] text-gray-300">
+            © 2026 Tribeca Dental Studio. All Rights Reserved.
+            <br />
+            <a href="https://kenzy.vercel.app/developer" target="_blank">
+              <strong>
+                <i className="text-[11px]">
+                  Design & Development by Kanat Nazarov
+                </i>
+              </strong>
+            </a>
           </p>
 
           <div className="flex gap-8">

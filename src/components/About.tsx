@@ -45,9 +45,12 @@ export default function About() {
                 delicate artistry of airway health.
               </p>
               <button className="group relative inline-block pb-1">
-                <span className="text-[10px] uppercase tracking-[0.5em] text-black">
-                  Meet the team
-                </span>
+                <a href="https://tribecadentalstudio.com/team/" target="_blank">
+                  <span className="text-[10px] uppercase tracking-[0.5em] text-black">
+                    Meet the team
+                  </span>
+                </a>
+
                 <div className="absolute bottom-0 left-0 h-[1px] w-8 bg-black/40 group-hover:w-full group-hover:bg-black transition-all duration-700" />
               </button>
             </motion.div>

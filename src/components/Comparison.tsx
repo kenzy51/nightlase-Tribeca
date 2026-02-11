@@ -24,7 +24,7 @@ export default function Comparison() {
   };
 
   return (
-    <section className="bg-white py-6 md:py-24">
+    <section className="bg-white py-6 md:py-24" id="results">
       <Container>
         <div className="text-center mb-12">
           <span className="text-[10px] uppercase tracking-[0.8em] text-gray-400 block mb-6">

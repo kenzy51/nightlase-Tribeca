@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function Testimonial() {
   const testimonials = [
     {
-      quote: "NightLase didn’t just stop my snoring; it restored the quality of my life. The artistry and care at Tribeca Dental are unmatched.",
-      author: "Private Concierge Client"
+      quote: "NightLase didn’t just stop my snoring; it restored the quality of my life. The artistry and care at Tribeca Dental Studio are unmatched.",
+      author: "Private Client"
     },
     {
       quote: "The immediate change was profound. For the first time in years, my partner and I are both waking up truly rested.",
@@ -45,10 +45,9 @@ export default function Testimonial() {
                 transition={{ duration: 1, delay: index * 0.2 }}
                 className="flex flex-col items-center text-center space-y-8"
               >
-                {/* Decorative gold element */}
                 <div className="w-8 h-[1px] bg-[#C5A059]/40" />
                 
-                <blockquote className="text-[18px] md:text-[26px] font-serif italic text-white/90 leading-relaxed font-light">
+                <blockquote className="text-[20px] md:text-[26px] font-serif italic text-white/90 leading-relaxed font-light">
                   &quot;{item.quote}&quot;
                 </blockquote>
                 
