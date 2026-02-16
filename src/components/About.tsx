@@ -39,7 +39,10 @@ export default function About() {
               <p className="text-[#4A4A4A] font-light leading-relaxed tracking-wide text-base md:text-xl font-sans italic mb-8">
                 Dr. Nina Izhaky and her team redefine restorative sleep through{" "}
                 <span className="text-black font-normal not-italic">
-                  NightLase®
+                  <a href="http://fotona.com/en/treatments/2039/nightlase-r/">
+                                      NightLase®
+
+                  </a>
                 </span>{" "}
                 — an advanced laser therapy where clinical precision meets the
                 delicate artistry of airway health.

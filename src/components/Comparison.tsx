@@ -83,13 +83,19 @@ export default function Comparison() {
               After
             </span>
           </div>
-         
         </div>
-         <div className="mt-8 text-center">
-            <p className="text-gray-400 font-light italic tracking-wide text-s">
-              NightLase® Soft Palate Treatment — Full anatomical reveal.
-            </p>
-          </div>
+        <div className="mt-8 text-center">
+          <p className="text-gray-400 font-light italic tracking-wide text-s">
+            <a
+              href=" 
+                fotona.com/en/treatments/2039/nightlase-r/
+                "
+            >
+              NightLase®
+            </a>
+            Soft Palate Treatment — Full anatomical reveal.
+          </p>
+        </div>
       </Container>
     </section>
   );
