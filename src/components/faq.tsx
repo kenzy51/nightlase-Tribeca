@@ -26,7 +26,6 @@ export default function FAQ() {
       <Container>
         <div className="flex flex-col md:flex-row gap-16 md:gap-24">
           
-          {/* Left: Section Title */}
           <div className="md:w-1/3">
             <h2 className="text-4xl font-serif sticky top-24">
               Scientific <br />
@@ -34,7 +33,6 @@ export default function FAQ() {
             </h2>
           </div>
 
-          {/* Right: Accordion */}
           <div className="md:w-2/3 border-t border-black/5">
             {faqs.map((faq, i) => (
               <div key={i} className="border-b border-black/5">

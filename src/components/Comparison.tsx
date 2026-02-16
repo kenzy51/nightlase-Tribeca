@@ -90,6 +90,7 @@ export default function Comparison() {
               href=" 
                 fotona.com/en/treatments/2039/nightlase-r/
                 "
+              target="_blank"
             >
               NightLase®
             </a>
