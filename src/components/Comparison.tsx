@@ -2,9 +2,14 @@
 import { useState, useRef } from "react";
 import Container from "./Container";
 
-export default function Comparison() {
+interface ComparisonProps {
+  lang: string;
+}
+
+export default function Comparison({ lang }: ComparisonProps) {
   const [sliderPos, setSliderPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isEs = lang === "es";
 
   const handleMove = (event: React.MouseEvent | React.TouchEvent) => {
     if (!containerRef.current) return;
@@ -28,10 +33,13 @@ export default function Comparison() {
       <Container>
         <div className="text-center mb-12">
           <span className="text-[10px] uppercase tracking-[0.8em] text-gray-400 block mb-6">
-            Proven Transformations
+            {isEs ? "Transformaciones Probadas" : "Proven Transformations"}
           </span>
           <h2 className="text-4xl md:text-6xl font-serif text-[#1A1A1A]">
-            The Art of <span className="italic font-light">Refinement.</span>
+            {isEs ? "El Arte del" : "The Art of"}{" "}
+            <span className="italic font-light">
+              {isEs ? "Refinamiento." : "Refinement."}
+            </span>
           </h2>
         </div>
 
@@ -72,7 +80,7 @@ export default function Comparison() {
             style={{ opacity: sliderPos < 15 ? 0 : 1 }}
           >
             <span className="text-[9px] uppercase tracking-[0.4em] text-white bg-black/30 backdrop-blur-md px-3 py-1.5">
-              Before
+              {isEs ? "Antes" : "Before"}
             </span>
           </div>
           <div
@@ -80,21 +88,23 @@ export default function Comparison() {
             style={{ opacity: sliderPos > 85 ? 0 : 1 }}
           >
             <span className="text-[9px] uppercase tracking-[0.4em] text-white bg-black/30 backdrop-blur-md px-3 py-1.5">
-              After
+              {isEs ? "Después" : "After"}
             </span>
           </div>
         </div>
+
         <div className="mt-8 text-center">
           <p className="text-gray-400 font-light italic tracking-wide text-s">
             <a
-              href=" 
-                fotona.com/en/treatments/2039/nightlase-r/
-                "
+              href="https://fotona.com/en/treatments/2039/nightlase-r/"
               target="_blank"
+              className="hover:text-black transition-colors"
             >
               NightLase®
-            </a>
-            Soft Palate Treatment — Full anatomical reveal.
+            </a>{" "}
+            {isEs 
+              ? "Tratamiento de Paladar Blando — Revelación anatómica completa." 
+              : "Soft Palate Treatment — Full anatomical reveal."}
           </p>
         </div>
       </Container>

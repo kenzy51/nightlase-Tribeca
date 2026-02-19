@@ -2,20 +2,31 @@
 import Container from "./Container";
 import { motion } from "framer-motion";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function Testimonial() {
+interface TestimonialProps {
+  lang: string;
+}
+
+export default function Testimonial({ lang }: TestimonialProps) {
+  const isEs = lang === "es";
+
   const testimonials = [
     {
-      quote: "NightLase didn’t just stop my snoring; it restored the quality of my life. The artistry and care at Tribeca Dental Studio are unmatched.",
-      author: "Private Client"
+      quote: isEs 
+        ? "NightLase no solo detuvo mis ronquidos; restauró mi calidad de vida. El arte y la atención en Tribeca Dental Studio son incomparables."
+        : "NightLase didn’t just stop my snoring; it restored the quality of my life. The artistry and care at Tribeca Dental Studio are unmatched.",
+      author: isEs ? "Cliente Privado" : "Private Client"
     },
     {
-      quote: "The immediate change was profound. For the first time in years, my partner and I are both waking up truly rested.",
-      author: "Executive Health Member"
+      quote: isEs
+        ? "El cambio inmediato fue profundo. Por primera vez en años, mi pareja y yo nos despertamos verdaderamente descansados."
+        : "The immediate change was profound. For the first time in years, my partner and I are both waking up truly rested.",
+      author: isEs ? "Miembro de Salud Ejecutiva" : "Executive Health Member"
     },
     {
-      quote: "A masterclass in diagnostic precision. Seeing my 3D airway scan was the 'aha' moment I needed to take control of my health.",
-      author: "Sleep Health Patient"
+      quote: isEs
+        ? "Una clase magistral de precisión diagnóstica. Ver mi escaneo 3D de las vías respiratorias fue el momento clave para tomar el control de mi salud."
+        : "A masterclass in diagnostic precision. Seeing my 3D airway scan was the 'aha' moment I needed to take control of my health.",
+      author: isEs ? "Paciente de Salud del Sueño" : "Sleep Health Patient"
     }
   ];
 
@@ -29,10 +40,10 @@ export default function Testimonial() {
               whileInView={{ opacity: 1 }}
               className="text-[14px] uppercase tracking-[0.8em] text-[#C5A059] block mb-6"
             >
-              The Patient Experience
+              {isEs ? "La Experiencia del Paciente" : "The Patient Experience"}
             </motion.span>
             <h2 className="text-white font-serif text-5xl italic opacity-80 font-light tracking-wide">
-              Voices of the Silent Night
+              {isEs ? "Voces de la Noche Silenciosa" : "Voices of the Silent Night"}
             </h2>
           </div>
           

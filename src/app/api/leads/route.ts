@@ -20,7 +20,6 @@ export async function POST(req: Request) {
         email,
         phone: cleanPhone,
         locationId: process.env.GHL_LOCATION_ID,
-        // Tagging by language allows for automated bilingual email replies
         tags: ['NightLase Landing Page', lang === 'es' ? 'Spanish' : 'English'],
         source: 'Nightlase Page'
       }),

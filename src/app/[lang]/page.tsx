@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Technology from "@/components/Technology";
 import Testimonial from "@/components/Testimonial";
-import { getDictionary } from "./dictionaries"; 
+import { getDictionary } from "./dictionaries";
 import Diagnostics from "@/components/Diagnostics";
 
 export default async function Home({
@@ -22,13 +22,13 @@ export default async function Home({
     <main>
       <Hero dict={dict.hero} />
 
-      <About />
-      <Diagnostics dict={dict.science} />
-      <Technology />
+      <About dict={dict} lang={lang} />
+      <Diagnostics dict={dict.science} lang={lang} />
+      <Technology lang={lang} />
 
-      <Comparison />
-      <Testimonial />
-      <FAQ />
+      <Comparison lang={lang} />
+      <Testimonial lang={lang} />
+      <FAQ lang={lang} />
       <ContactForm />
       <Footer />
     </main>
