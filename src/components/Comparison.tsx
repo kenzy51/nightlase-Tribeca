@@ -45,13 +45,13 @@ export default function Comparison({ lang }: ComparisonProps) {
 
         <div
           ref={containerRef}
-          className="relative w-full max-w-4xl mx-auto cursor-ew-resize select-none overflow-hidden group shadow-sm aspect-[4/3] md:aspect-video rounded-2xl"
+          className="relative w-full max-w-4xl mx-auto cursor-ew-resize select-none overflow-hidden group shadow-sm aspect-[4/2] md:aspect-video rounded-2xl"
           onMouseMove={handleMove}
           onTouchMove={handleMove}
         >
           {/* After Image (Background) */}
           <img 
-            src="/After.png" 
+            src="/result.png" 
             alt="After" 
             className="absolute inset-0 w-full h-full object-cover block" 
           />
