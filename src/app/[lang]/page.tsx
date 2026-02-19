@@ -22,7 +22,7 @@ export default async function Home({
     <main>
       <Hero dict={dict.hero} />
 
-      <About dict={dict} lang={lang} />
+      <About lang={lang} />
       <Diagnostics dict={dict.science} lang={lang} />
       <Technology lang={lang} />
 
