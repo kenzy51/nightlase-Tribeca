@@ -45,49 +45,57 @@ export default function Comparison({ lang }: ComparisonProps) {
 
         <div
           ref={containerRef}
-          className="relative w-full max-w-4xl mx-auto cursor-ew-resize select-none overflow-hidden group shadow-sm"
+          className="relative w-full max-w-4xl mx-auto cursor-ew-resize select-none overflow-hidden group shadow-sm aspect-[4/3] md:aspect-video rounded-2xl"
           onMouseMove={handleMove}
           onTouchMove={handleMove}
         >
-          <img src="/After.png" alt="After" className="w-full h-auto block" />
+          {/* After Image (Background) */}
+          <img 
+            src="/After.png" 
+            alt="After" 
+            className="absolute inset-0 w-full h-full object-cover block" 
+          />
 
+          {/* Before Image (Overlay) */}
           <div
-            className="absolute inset-0 w-full h-full transition-all duration-75 ease-out"
+            className="absolute inset-0 w-full h-full z-10"
             style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
           >
             <img
               src="/Before.png"
               alt="Before"
-              className="w-full h-auto block"
+              className="absolute inset-0 w-full h-full object-cover block"
             />
           </div>
 
+          {/* Divider Handle */}
           <div
-            className={`absolute top-0 bottom-0 w-[1px] bg-white z-30 transition-opacity duration-300
+            className={`absolute top-0 bottom-0 w-[2px] bg-white z-30 transition-opacity duration-300
               ${sliderPos <= 0 || sliderPos >= 100 ? "opacity-0" : "opacity-100"}`}
             style={{ left: `${sliderPos}%` }}
           >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-xl">
-              <div className="flex gap-1">
-                <div className="w-1 h-1 bg-black/20 rounded-full" />
-                <div className="w-1 h-1 bg-black/20 rounded-full" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-2xl border border-black/5 pointer-events-none">
+               <div className="flex gap-1">
+                <div className="w-1 h-1 bg-black/40 rounded-full" />
+                <div className="w-1 h-1 bg-black/40 rounded-full" />
               </div>
             </div>
           </div>
 
+          {/* Labels */}
           <div
-            className="absolute bottom-4 left-4 z-40 pointer-events-none transition-opacity duration-500"
+            className="absolute bottom-6 left-6 z-40 pointer-events-none transition-opacity duration-500"
             style={{ opacity: sliderPos < 15 ? 0 : 1 }}
           >
-            <span className="text-[9px] uppercase tracking-[0.4em] text-white bg-black/30 backdrop-blur-md px-3 py-1.5">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-white bg-black/40 backdrop-blur-xl px-4 py-2 border border-white/10">
               {isEs ? "Antes" : "Before"}
             </span>
           </div>
           <div
-            className="absolute bottom-4 right-4 z-40 pointer-events-none transition-opacity duration-500"
+            className="absolute bottom-6 right-6 z-40 pointer-events-none transition-opacity duration-500"
             style={{ opacity: sliderPos > 85 ? 0 : 1 }}
           >
-            <span className="text-[9px] uppercase tracking-[0.4em] text-white bg-black/30 backdrop-blur-md px-3 py-1.5">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-white bg-black/40 backdrop-blur-xl px-4 py-2 border border-white/10">
               {isEs ? "Después" : "After"}
             </span>
           </div>
