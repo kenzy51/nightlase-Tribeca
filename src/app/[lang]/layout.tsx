@@ -29,9 +29,9 @@ export async function generateMetadata({
       ? "Duerma profundamente y sin ruidos con NightLase®. Tratamiento láser no invasivo para ronquidos y apnea del sueño en Tribeca. Sin cirugía."
       : "Experience deep, quiet sleep with NightLase®. A non-invasive, laser-based treatment for snoring and sleep apnea in Tribeca. No surgery, no downtime.",
     icons: {
-      icon: "/TribecaLogo.png",
-      shortcut: "/TribecaLogo.png",
-      apple: "/TribecaLogo.png",
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/favicon.ico",
     },
     verification: {
       google: "FvXb6KDkt8yxyo6HnbW1yLiHs9YrgSWnt0xbQ2cag0I",
