@@ -33,12 +33,15 @@ export async function generateMetadata({
       shortcut: "/favicon.ico",
       apple: "/favicon.ico",
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
     verification: {
       google: "FvXb6KDkt8yxyo6HnbW1yLiHs9YrgSWnt0xbQ2cag0I",
     },
     alternates: {
-      canonical: `https://nightlase.tribecadentalstudio.com/${lang}`,
-      languages: {
+      canonical: `https://tribecadentalstudio.com/services/sleep-apnea-treatments/`, languages: {
         "en-US": "https://nightlase.tribecadentalstudio.com/en",
         "es-ES": "https://nightlase.tribecadentalstudio.com/es",
       },
@@ -78,7 +81,7 @@ export default async function RootLayout(props: {
 }) {
   const params = await props.params;
   const children = props.children;
-  
+
   const lang = params.lang === "es" ? "es" : "en";
   const dict = await getDictionary(lang);
 
