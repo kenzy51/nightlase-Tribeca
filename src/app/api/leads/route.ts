@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     const cleanPhone = `+1${phone.replace(/\D/g, '').slice(-10)}`;
     const newLink = 'https://tds-leads.vercel.app/api/leads/nightlase_form'
     const old = 'https://services.leadconnectorhq.com/contacts/upsert'
-    const response = await fetch(newLink, {
+    const response = await fetch(old, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${process.env.GHL_PRIVATE_TOKEN}`,
