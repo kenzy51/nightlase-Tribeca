@@ -22,7 +22,7 @@ export async function POST(req: Request) {
         phone: cleanPhone,
         locationId: process.env.GHL_LOCATION_ID,
         tags: ['NightLase Landing Page', lang === 'es' ? 'Spanish' : 'English'],
-        source: `Nightlase ${lang === 'es' ? 'Spanish' : 'English'}`
+        source: 'Nightlase'
       }),
     });
 
