@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import "../globals.css";
@@ -66,8 +67,18 @@ export async function generateMetadata({
       type: "website",
     },
     keywords: isEs
-      ? ["NightLase NYC", "Tratamiento ronquidos Tribeca", "Apnea del sueño láser", "Curar ronquidos NYC"]
-      : ["NightLase NYC", "Snoring treatment Tribeca", "Sleep apnea laser therapy", "Non-invasive snoring cure"],
+      ? [
+          "NightLase NYC",
+          "Tratamiento ronquidos Tribeca",
+          "Apnea del sueño láser",
+          "Curar ronquidos NYC",
+        ]
+      : [
+          "NightLase NYC",
+          "Snoring treatment Tribeca",
+          "Sleep apnea laser therapy",
+          "Non-invasive snoring cure",
+        ],
   };
 }
 
@@ -78,7 +89,7 @@ export default async function RootLayout(props: {
 }) {
   const params = await props.params;
   const children = props.children;
-  
+
   const lang = params.lang === "es" ? "es" : "en";
   const dict = await getDictionary(lang);
 
@@ -89,6 +100,13 @@ export default async function RootLayout(props: {
         <Header lang={lang} dict={dict} />
         {children}
       </body>
+      <script
+      // @ts-ignore
+        theme='{"primary":"#fffffff","background":"#ffffff"}'
+        src="https://chatbot.seeb.ai/embed.js"
+        access-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGUwYTgyMjE3NWJmMTdiNzY2YzdhMCIsInJvbGUiOiJQVUJMSUMiLCJlbWFpbCI6InByQE55dGRzLmNvbSIsImZ1bGxOYW1lIjoiVHJpYmVjYSBEZW50YWwgU3R1ZGlvIiwiaWF0IjoxNzcyNjUyNjEyLCJleHAiOjIwODgyMjg2MTJ9.YHlLlDWIWNcxc7-0hQdoTAFnZFI1w6ln5jgVyBNuMiw"
+        chat-id="9264a102-5a9b-4701-850e-ec2527893562"
+      ></script>
     </html>
   );
 }
