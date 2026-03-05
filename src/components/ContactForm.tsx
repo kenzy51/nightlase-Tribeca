@@ -42,7 +42,7 @@ export default function ContactForm() {
         body: JSON.stringify(payload),
         headers: { "Content-Type": "application/json" },
       });
-
+      console.log(res)
       if (!res.ok) throw new Error("Submission failed");
 
       setStatus("success");

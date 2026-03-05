@@ -6,8 +6,9 @@ export async function POST(req: Request) {
     const { firstName, lastName, email, phone, lang } = body;
 
     const cleanPhone = `+1${phone.replace(/\D/g, '').slice(-10)}`;
-
-    const response = await fetch('https://services.leadconnectorhq.com/contacts/upsert', {
+    const newLink = 'https://tds-leads.vercel.app/api/leads/nightlase_form'
+    const old = 'https://services.leadconnectorhq.com/contacts/upsert'
+    const response = await fetch(old, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${process.env.GHL_PRIVATE_TOKEN}`,
@@ -21,13 +22,14 @@ export async function POST(req: Request) {
         phone: cleanPhone,
         locationId: process.env.GHL_LOCATION_ID,
         tags: ['NightLase Landing Page', lang === 'es' ? 'Spanish' : 'English'],
-        source: 'Nightlase Page'
+        source: 'Nightlase'
       }),
     });
 
     const data = await response.json();
 
     if (!response.ok) {
+      console.log(response)
       return NextResponse.json({ error: data.message || "GHL API Error" }, { status: response.status });
     }
 
