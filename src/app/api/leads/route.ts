@@ -47,19 +47,31 @@ export async function POST(req: Request) {
       },
     );
 
-    const [ghlResponse, tdsResponse] = await Promise.all([tdsRequest, ghlRequest]);
-    // 3. Check for errors
+    const [tdsResponse, ghlResponse] = await Promise.all([
+      tdsRequest,
+      ghlRequest,
+    ]);
+
+    const safeJson = async (res: Response) => {
+      try {
+        return await res.json();
+      } catch {
+        return null;
+      }
+    };
+
     if (!ghlResponse.ok) {
-      const ghlData = await ghlResponse.json();
+      const ghlData = await safeJson(ghlResponse);
       return NextResponse.json(
-        { error: ghlData.message || "GHL API Error" },
+        { error: ghlData?.message || "GHL API Error" },
         { status: ghlResponse.status },
       );
     }
 
     if (!tdsResponse.ok) {
+      const tdsData = await safeJson(tdsResponse);
       return NextResponse.json(
-        { error: "TDS API Error" },
+        { error: tdsData?.message || "TDS API Error" },
         { status: tdsResponse.status },
       );
     }
