@@ -42,7 +42,8 @@ export async function generateMetadata({
       google: "FvXb6KDkt8yxyo6HnbW1yLiHs9YrgSWnt0xbQ2cag0I",
     },
     alternates: {
-      canonical: `https://tribecadentalstudio.com/services/sleep-apnea-treatments/`, languages: {
+      canonical: `https://tribecadentalstudio.com/services/sleep-apnea-treatments/`,
+      languages: {
         "en-US": "https://nightlase.tribecadentalstudio.com/en",
         "es-ES": "https://nightlase.tribecadentalstudio.com/es",
       },
@@ -102,9 +103,13 @@ export default async function RootLayout(props: {
         {/* @ts-ignore */}
         <Header lang={lang} dict={dict} />
         {children}
+        <script
+          src="https://leadpipe.aws53.cloud/p/f9f96ecd-40b1-4b48-8f3d-c08e31828078.js"
+          async
+        ></script>
       </body>
       <script
-      // @ts-ignore
+        // @ts-ignore
         theme='{"primary":"#fffffff","background":"#ffffff"}'
         src="https://chatbot.seeb.ai/embed.js"
         access-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGUwYTgyMjE3NWJmMTdiNzY2YzdhMCIsInJvbGUiOiJQVUJMSUMiLCJlbWFpbCI6InByQE55dGRzLmNvbSIsImZ1bGxOYW1lIjoiVHJpYmVjYSBEZW50YWwgU3R1ZGlvIiwiaWF0IjoxNzcyNjUyNjEyLCJleHAiOjIwODgyMjg2MTJ9.YHlLlDWIWNcxc7-0hQdoTAFnZFI1w6ln5jgVyBNuMiw"
