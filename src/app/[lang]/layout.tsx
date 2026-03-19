@@ -5,6 +5,7 @@ import "../globals.css";
 import Header from "@/components/Header";
 import { Metadata } from "next";
 import { getDictionary } from "./dictionaries";
+import { brandonGrotesque } from "../fonts";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const cormorant = Cormorant_Garamond({
@@ -98,7 +99,13 @@ export default async function RootLayout(props: {
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang} className={`${inter.variable} ${cormorant.variable}`}>
+    <html
+      lang={lang}
+      className={`
+      ${brandonGrotesque.variable} 
+    `}
+      style={{ fontFamily: "var(--font-brandon)" }}
+    >
       <body className="bg-white text-foreground antialiased selection:bg-luxury-gold selection:text-white">
         {/* @ts-ignore */}
         <Header lang={lang} dict={dict} />

@@ -16,7 +16,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // High-end Serif and Clean Sans
+        brandon: ["var(--font-brandon)", "sans-serif"],
         serif: ["var(--font-cormorant-garamond)", "serif"],
         sans: ["var(--font-inter)", "sans-serif"],
       },
