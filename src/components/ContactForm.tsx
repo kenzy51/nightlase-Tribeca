@@ -8,12 +8,12 @@ export default function ContactForm() {
   const params = useParams();
   const lang = params.lang as string;
   
-  useEffect(() => {
-    const element = document.getElementById("leadForm");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+  // useEffect(() => {
+  //   const element = document.getElementById("leadForm");
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, []);
 
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
 

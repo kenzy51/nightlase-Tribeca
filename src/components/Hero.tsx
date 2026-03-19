@@ -19,6 +19,7 @@ export default function Hero({ dict }: HeroProps) {
         autoPlay
         muted
         loop
+        poster="/Nightlase.webp"
         playsInline
         className="absolute inset-0 z-0 h-full w-full object-cover opacity-60"
       >
